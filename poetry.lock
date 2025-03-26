@@ -275,6 +275,23 @@ files = [
 ]
 
 [[package]]
+name = "mock"
+version = "5.2.0"
+description = "Rolling backport of unittest.mock for all Pythons"
+optional = false
+python-versions = ">=3.6"
+groups = ["dev"]
+files = [
+    {file = "mock-5.2.0-py3-none-any.whl", hash = "sha256:7ba87f72ca0e915175596069dbbcc7c75af7b5e9b9bc107ad6349ede0819982f"},
+    {file = "mock-5.2.0.tar.gz", hash = "sha256:4e460e818629b4b173f32d08bf30d3af8123afbb8e04bb5707a1fd4799e503f0"},
+]
+
+[package.extras]
+build = ["blurb", "twine", "wheel"]
+docs = ["sphinx"]
+test = ["pytest", "pytest-cov"]
+
+[[package]]
 name = "mypy"
 version = "1.15.0"
 description = "Optional static typing for Python"
@@ -988,4 +1005,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.9.12"
-content-hash = "a4c74e4bf7f913b6efdc5a14f4d4b7614fd49f6f5c41ffa19b394541e4123eb0"
+content-hash = "0cd302955b2ecfc153054028390b79fdd5bfc94d891588c4d3953514a0d195f3"
