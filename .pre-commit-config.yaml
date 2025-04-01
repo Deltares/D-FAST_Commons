@@ -48,9 +48,9 @@ repos:
     rev: 7.1.2
     hooks:
       - id: flake8
-        additional_dependencies: [Flake8-pyproject]
+        additional_dependencies: [Flake8-pyproject, flake8-bugbear, flake8-docstrings]
         name: "[py   - check] flake8"
-        exclude: ^(examples/|tests/)
+        exclude: ^(examples/|tests/|docs/)
 #   - repo: https://github.com/pycqa/docformatter
 #     rev: v1.4
 #     hooks:
@@ -66,9 +66,9 @@ repos:
 #     hooks:
 #       - id: pydocstyle
 #         name: "[py   - check] pydocstyle"
-#         files: ^hydrolib/.*\.py$
+#         files: ^dfastio/.*\.py$
   - repo: https://github.com/pycqa/isort
-    rev: 6.0.0
+    rev: 6.0.1
     hooks:
       - id: isort
         name: "[py   - format] isort"
@@ -76,6 +76,7 @@ repos:
     rev: 25.1.0
     hooks:
       - id: black
+        args: ["--config=pyproject.toml"]
   - repo: https://github.com/lovesegfault/beautysh
     rev: v6.2.1
     hooks:
@@ -120,12 +121,12 @@ repos:
     hooks:
       - id: detect-secrets
   - repo: https://github.com/bridgecrewio/checkov
-    rev: 3.2.377
+    rev: 3.2.386
     hooks:
       - id: checkov
 
   - repo: https://github.com/trufflesecurity/truffleHog
-    rev: v3.88.13
+    rev: v3.88.17
     hooks:
       - id: trufflehog
 
@@ -138,11 +139,18 @@ repos:
 #         types: [python]
 #         pass_filenames: false
 
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.4.1
+    hooks:
+      - id: commitizen
+        stages: [commit-msg]
+
+
   - repo: local
     hooks:
       - id: pytest-check
         name: pytest-check
-        entry: pytest -vvv --cov=hydrolib --cov-report term-missing
+        entry: pytest -vvv --cov=src/dfastio --cov-report term-missing
         language: system
         pass_filenames: false
         always_run: true
@@ -161,4 +169,4 @@ repos:
         name: doctest
         entry: pytest --doctest-modules
         language: system
-        files: ^hydrolib/.*\.py$
+        files: ^src/dfastio/.*\.py$
