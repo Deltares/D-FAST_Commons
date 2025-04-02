@@ -15,6 +15,7 @@ geopandas = ">=0.14.4"
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2.1"
 pytest-cov = "^5.0"
+pyfakefs = "^5.1.0"
 pre-commit = "^4.2.0"
 
 [tool.poetry.group.docs.dependencies]
