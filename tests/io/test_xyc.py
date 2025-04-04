@@ -1,12 +1,51 @@
 import unittest.mock as mock
 from io import StringIO
 
+import numpy as np
 import pytest
+from pyfakefs.fake_filesystem import FakeFilesystem
 
 from dfastio.xyc.models import XYCModel
 
 
-class TestReadXYC:
+class TestXYCModel:
+    """Test class for XYCModel."""
+
+    write_parameters = [
+        pytest.param(
+            np.array([[1, 2], [4, 5], [7, 8], [10, 11]]),
+            np.array([1, 2, 3, 4]),
+            (
+                "1.00\t2.00\t1.00\n"
+                "4.00\t5.00\t2.00\n"
+                "7.00\t8.00\t3.00\n"
+                "10.00\t11.00\t4.00\n"
+            ),
+            id="Write with single value",
+        ),
+        pytest.param(
+            np.array([[1, 2], [4, 5], [7, 8], [10, 11]]),
+            np.array([[1, 2], [2, 3], [3, 4], [4, 5]]),
+            (
+                "1.00\t2.00\t1.00\t2.00\n"
+                "4.00\t5.00\t2.00\t3.00\n"
+                "7.00\t8.00\t3.00\t4.00\n"
+                "10.00\t11.00\t4.00\t5.00\n"
+            ),
+            id="Write with multiple values",
+        ),
+    ]
+
+    @pytest.mark.parametrize("xy_data, val_data, expected", write_parameters)
+    def test_write_xyc(self, xy_data, val_data, expected, fs: FakeFilesystem):
+        """Test writing a .xyc file using np.array."""
+        file_path = "/mock_dir/test_output.xyc"
+        fs.create_dir("/mock_dir")
+        XYCModel.write_xyc(xy_data, val_data, file_path)
+
+        with open(file_path, "r") as file:
+            content = file.read()
+        assert content == expected
 
     @pytest.fixture
     def setup_data(self):
