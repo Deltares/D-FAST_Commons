@@ -1,4 +1,5 @@
-# bank_erosion
+# xyc module
 
-## Bank Erosion
-::: dfastio.xyc
+## XYC file model.
+
+::: dfastio.xyc.models
