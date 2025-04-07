@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "d-fast-io"
+name = "dfastio"
 version = "0.1.0"
 description = "A support library for D-fast tools."
 authors = ["Stichting Deltares <delft3d.support@deltares.nl>"]
