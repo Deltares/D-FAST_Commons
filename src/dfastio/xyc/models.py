@@ -1,6 +1,6 @@
 """XYC file reader and writer."""
 
-import os
+from pathlib import Path
 
 import geopandas as gpd
 import numpy as np
@@ -46,7 +46,7 @@ class XYCModel:
 
             ```
         """
-        _, ext = os.path.splitext(file_name)
+        ext = Path(file_name).suffix
         if ext.lower() == ".xyc":
             if num_columns == 3:
                 column_names = ["Val", "X", "Y"]

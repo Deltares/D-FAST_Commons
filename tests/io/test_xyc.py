@@ -49,8 +49,8 @@ class TestXYCModel:
 
     @pytest.fixture
     def setup_data(self):
-        with mock.patch("os.path.splitext") as mock_splitext:
-            mock_splitext.return_value = ("c:\\", ".XYC")
+        with mock.patch("dfastio.xyc.models.Path") as mock_path:
+            mock_path.return_value.suffix = ".XYC"
             yield self
 
     def test_read_xyc_read_waqua_xyz_test_xyc_file(self):
