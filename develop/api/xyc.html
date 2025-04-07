@@ -1378,7 +1378,7 @@
 
 <span class="sd">            ```</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">_</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+        <span class="n">ext</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span><span class="o">.</span><span class="n">suffix</span>
         <span class="k">if</span> <span class="n">ext</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.xyc&quot;</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">num_columns</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
                 <span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Val&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">]</span>
@@ -1701,7 +1701,7 @@ Line strings.</p>
 
 <span class="sd">        ```</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">_</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span>
+    <span class="n">ext</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span><span class="o">.</span><span class="n">suffix</span>
     <span class="k">if</span> <span class="n">ext</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="o">==</span> <span class="s2">&quot;.xyc&quot;</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">num_columns</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
             <span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Val&quot;</span><span class="p">,</span> <span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="s2">&quot;Y&quot;</span><span class="p">]</span>
