@@ -120,13 +120,9 @@ class XYCModel:
         with open(file_name, "w") as xyc:
             if val.ndim == 1:
                 for i in range(len(val)):
-                    val_str = "{:.2f}".format(val[i])
-                    xyc.write(
-                        "{:.2f}\t{:.2f}\t".format(xy[i, 0], xy[i, 1]) + val_str + "\n"
-                    )
+                    val_str = f"{val[i]:.2f}"
+                    xyc.write(f"{xy[i, 0]:.2f}\t{xy[i, 1]:.2f}\t{val_str}\n")
             else:
                 for i in range(len(val)):
-                    val_str = "\t".join(["{:.2f}".format(x) for x in val[i, :]])
-                    xyc.write(
-                        "{:.2f}\t{:.2f}\t".format(xy[i, 0], xy[i, 1]) + val_str + "\n"
-                    )
+                    val_str = "\t".join(f"{x:.2f}" for x in val[i, :])
+                    xyc.write(f"{xy[i, 0]:.2f}\t{xy[i, 1]:.2f}\t{val_str}\n")
