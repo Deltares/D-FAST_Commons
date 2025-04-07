@@ -13,7 +13,7 @@ class XYCModel:
     """Class for reading and writing XYC files."""
 
     @staticmethod
-    def read_xyc(
+    def read(
         file_name: str,
         num_columns: int = 2,
         delimiter: str = None,
@@ -40,7 +40,7 @@ class XYCModel:
             ```python
             >>> from dfastio.xyc.models import XYCModel
             >>> path = "examples/data/simple-xyc-file.xyc"
-            >>> line = XYCModel.read_xyc(path, num_columns=3, delimiter=" ", has_header=True)
+            >>> line = XYCModel.read(path, num_columns=3, delimiter=" ", has_header=True)
             >>> print(line)
             LINESTRING Z (5 6 4, 8 9 7, 11 12 10)
 
