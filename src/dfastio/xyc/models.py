@@ -67,7 +67,7 @@ class XYCModel:
                     names=column_names,
                     skipinitialspace=True,
                     header=header,
-                    delim_whitespace=True,
+                    sep=r"\s+",
                 )
 
             num_points = len(data.X)
