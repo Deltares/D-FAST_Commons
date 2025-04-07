@@ -88,21 +88,34 @@ class XYCModel:
 
     @staticmethod
     def write(xy: np.ndarray, val: np.ndarray, file_name: str) -> None:
-        """
-        Write a text file with x, y, and values.
+        r"""Write a text file with x, y, and values.
 
-        Arguments
-        ---------
-        xy : np.ndarray
-            N x 2 array containing x and y coordinates.
-        val : np.ndarray
-            N x k array containing values.
-        file_name : str
-            Name of the file to be written.
+        Args:
+            xy (np.ndarray):
+                An N x 2 array containing x and y coordinates.
+            val (np.ndarray):
+                An N x k array containing values.
+            file_name (str):
+                The name of the file to be written.
 
-        Returns
-        -------
-        None
+        Returns:
+            None
+
+        Example:
+            ```python
+            >>> from dfastio.xyc.models import XYCModel
+            >>> import numpy as np
+            >>> import tempfile
+            >>> xy = np.array([[1, 2], [4, 5], [7, 8], [10, 11]])
+            >>> val = np.array([1, 2, 3, 4])
+            >>> with tempfile.TemporaryDirectory() as tempdir:
+            ...     file_name = f"{tempdir}/output.xyc"
+            ...     XYCModel.write(xy, val, file_name)
+            ...     with open(file_name, "r") as f:
+            ...         f.read()
+            '1.00\t2.00\t1.00\n4.00\t5.00\t2.00\n7.00\t8.00\t3.00\n10.00\t11.00\t4.00\n'
+
+            ```
         """
         with open(file_name, "w") as xyc:
             if val.ndim == 1:
