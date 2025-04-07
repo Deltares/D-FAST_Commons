@@ -41,7 +41,7 @@ class TestXYCModel:
         """Test writing a .xyc file using np.array."""
         file_path = "/mock_dir/test_output.xyc"
         fs.create_dir("/mock_dir")
-        XYCModel.write_xyc(xy_data, val_data, file_path)
+        XYCModel.write(xy_data, val_data, file_path)
 
         with open(file_path, "r") as file:
             content = file.read()

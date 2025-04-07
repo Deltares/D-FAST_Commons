@@ -87,7 +87,7 @@ class XYCModel:
         return coords_line_strig
 
     @staticmethod
-    def write_xyc(xy: np.ndarray, val: np.ndarray, file_name: str) -> None:
+    def write(xy: np.ndarray, val: np.ndarray, file_name: str) -> None:
         """
         Write a text file with x, y, and values.
 
