@@ -2,42 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://deltares.github.io/D-FAST_Commons/develop/index.html</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-09-04</lastmod>
     </url>
     <url>
          <loc>https://deltares.github.io/D-FAST_Commons/develop/change-log.html</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-09-04</lastmod>
     </url>
     <url>
          <loc>https://deltares.github.io/D-FAST_Commons/develop/license.html</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-09-04</lastmod>
     </url>
     <url>
          <loc>https://deltares.github.io/D-FAST_Commons/develop/api/xyc.html</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-09-04</lastmod>
     </url>
     <url>
          <loc>https://deltares.github.io/D-FAST_Commons/develop/guides/contributing.html</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-09-04</lastmod>
     </url>
     <url>
          <loc>https://deltares.github.io/D-FAST_Commons/develop/guides/developer-instructions.html</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-09-04</lastmod>
     </url>
     <url>
          <loc>https://deltares.github.io/D-FAST_Commons/develop/guides/doctest.html</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-09-04</lastmod>
     </url>
     <url>
          <loc>https://deltares.github.io/D-FAST_Commons/develop/guides/documentation.html</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-09-04</lastmod>
     </url>
     <url>
          <loc>https://deltares.github.io/D-FAST_Commons/develop/guides/poetry.html</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-09-04</lastmod>
     </url>
     <url>
          <loc>https://deltares.github.io/D-FAST_Commons/develop/guides/pre-commit-hooks.html</loc>
-         <lastmod>2025-04-11</lastmod>
+         <lastmod>2025-09-04</lastmod>
     </url>
 </urlset>
